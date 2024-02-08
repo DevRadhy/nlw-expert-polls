@@ -16,7 +16,7 @@ export async function voteOnPoll(app: FastifyInstance) {
     })
   
     const { pollOptionId } = voteOnPollBody.parse(request.body)
-    const { pollId } = voteOnPollParams.parse(request.body)
+    const { pollId } = voteOnPollParams.parse(request.params)
 
     let { sessionId } = request.cookies
 
